@@ -1,0 +1,140 @@
+* {
+  outline: 1px solid #000;
+}
+
+.inner {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.TopBanner {
+  background: #008850;
+  color: #f9f9f9;
+  overflow: hidden;
+  height: 155px;
+  transition: 0.4s;
+}
+
+.TopBanner .inner {
+  position: relative;
+  padding: 50px 0;
+}
+
+.TopBanner.on {
+  height: 0;
+}
+
+.TopBanner h2 {
+  margin: 0 0 10px 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.TopBanner h2 span {
+  margin: 0 0 0 10px;
+  font-weight: 400;
+  color: #00e085;
+}
+
+.TopBanner p {
+  font-size: 15px;
+}
+
+.TopBanner .top_close_btn {
+  position: absolute;
+  top: 30px;
+  right: 15px;
+  font-size: 40px;
+}
+
+.Header {
+  padding: 0 75px;
+  background: rgba(0, 0, 0, 0.3);
+  color: #f9f9f9;
+  line-height: 100px;
+  transition: 0.5s;
+}
+
+.Header:hover {
+  background: rgba(255, 255, 255, 1);
+  color: #444;
+}
+
+.Header h1 {
+  float: left;
+}
+
+.Header h1 a {
+  display: inline-block;
+  vertical-align: middle;
+  width: 188px;
+  height: 22px;
+  background: url('../assets/logo_01.png');
+  font-size: 0;
+}
+
+.Header:hover h1 a {
+  background: url('../assets/logo_02.png');
+}
+
+.Header .Gnb {
+  float: left;
+  margin: 0 0 0 50px;
+}
+
+.Header .top_service {
+  float: right;
+}
+
+.Header .Gnb>ul>li {
+  float: left;
+}
+
+.Header .Gnb>ul>li>a {
+  display: block;
+  position: relative;
+  padding: 0 35px;
+  font-size: 19px;
+}
+
+.Header .Gnb>ul>li>a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 35px;
+  right: 100%;
+  height: 2px;
+  background: #008850;
+  transition: 0.3s;
+}
+
+.Header .Gnb>ul>li>a:hover::after {
+  right: 35px;
+}
+
+.main_slider figure {
+  position: relative;
+  height: 700px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.main_slider figure .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main_slider .itm01 {
+  background-image: url('../assets/main_visual01.jpg');
+}
+
+.main_slider .itm02 {
+  background-image: url('../assets/main_visual02.jpg');
+}
+
+.main_slider .itm03 {
+  background-image: url('../assets/main_visual03.jpg');
+}
