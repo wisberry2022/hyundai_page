@@ -1,11 +1,13 @@
-* {
-  outline: 1px solid #000;
+/* 슬릭슬라이드 깜박임 해결 : 브라우즈 업그레이드와 관련있는 이슈였음... reset으로 옮길 예정 */
+.slick-slide {
+  transform: translate3d(0, 0, 0);
 }
 
 .inner {
-  margin: 0 auto;
   width: 1200px;
+  margin: 0 auto;
 }
+
 
 .TopBanner {
   background: #008850;
@@ -13,6 +15,7 @@
   overflow: hidden;
   height: 155px;
   transition: 0.4s;
+  line-height: 1;
 }
 
 .TopBanner .inner {
@@ -25,15 +28,16 @@
 }
 
 .TopBanner h2 {
-  margin: 0 0 10px 0;
   font-size: 30px;
   font-weight: 700;
+  margin: 0 0 10px 0;
 }
 
+
 .TopBanner h2 span {
-  margin: 0 0 0 10px;
   font-weight: 400;
   color: #00e085;
+  margin: 0 0 0 10px;
 }
 
 .TopBanner p {
@@ -48,20 +52,35 @@
 }
 
 .Header {
-  padding: 0 75px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* padding: 0 75px; */
   background: rgba(0, 0, 0, 0.3);
   color: #f9f9f9;
   line-height: 100px;
   transition: 0.5s;
+  border-bottom: 1px solid transparent;
+  z-index: 999;
 }
 
 .Header:hover {
   background: rgba(255, 255, 255, 1);
-  color: #444;
+  color: #444444;
+}
+
+.Header.on {
+  background: rgba(255, 255, 255, 1);
+  color: #444444;
+  line-height: 70px;
+  border-bottom: 1px solid #ddd;
 }
 
 .Header h1 {
   float: left;
+  margin: 0 0 0 70px;
+  font-size: 0;
 }
 
 .Header h1 a {
@@ -69,12 +88,16 @@
   vertical-align: middle;
   width: 188px;
   height: 22px;
-  background: url('../assets/logo_01.png');
+  background: url(../assets/logo_w.png);
   font-size: 0;
 }
 
 .Header:hover h1 a {
-  background: url('../assets/logo_02.png');
+  background: url(../assets/logo.png);
+}
+
+.Header.on h1 a {
+  background: url(../assets/logo.png);
 }
 
 .Header .Gnb {
@@ -84,6 +107,7 @@
 
 .Header .top_service {
   float: right;
+  margin: 0 70px 0 0;
 }
 
 .Header .Gnb>ul>li {
@@ -91,18 +115,18 @@
 }
 
 .Header .Gnb>ul>li>a {
-  display: block;
   position: relative;
+  display: block;
   padding: 0 35px;
   font-size: 19px;
 }
 
 .Header .Gnb>ul>li>a::after {
-  content: '';
+  content: "";
   position: absolute;
-  bottom: 0;
   left: 35px;
   right: 100%;
+  bottom: -1px;
   height: 2px;
   background: #008850;
   transition: 0.3s;
@@ -114,7 +138,7 @@
 
 .main_slider figure {
   position: relative;
-  height: 700px;
+  height: 900px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -137,4 +161,263 @@
 
 .main_slider .itm03 {
   background-image: url('../assets/main_visual03.jpg');
+}
+
+.Section01 {
+  padding: 155px 0 0 0;
+  transition: 0.5s;
+}
+
+.Section01.on {
+  padding: 0 0 0 0;
+}
+
+.Section02 {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.Section02 h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+}
+
+.Section02>p {
+  font-size: 15px;
+  font-weight: 300;
+  margin: 0 0 40px 0;
+}
+
+.Section02 .inner figure {
+  float: left;
+  width: calc(100% / 3);
+}
+
+.Section02 .inner .thumb {
+  overflow: hidden;
+  margin: 0 0 40px 0;
+}
+
+.Section02 .inner figure img {
+  transition: 0.4s;
+}
+
+.Section02 .inner figure:hover img {
+  transform: scale(1.2);
+}
+
+.Section02 .inner .des {
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+}
+
+.Section02 .inner .des::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -60px;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 40px;
+  background: #008850;
+}
+
+.Section02 .inner p {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.45;
+  margin: 0 0 20px 0;
+}
+
+.Section02 .inner a {
+  display: inline-block;
+  padding: 10px 25px;
+  border: 1px solid #008850;
+  color: #008850;
+  font-size: 13px;
+}
+
+.Section03 {
+  padding: 100px 0;
+  background: url('../assets/section1_bg.jpg') repeat-x;
+}
+
+.Section03 .slider_box {
+  float: right;
+  width: calc((100% - 1200px) / 2 + 1200px);
+}
+
+.Section03 .slider_box>div {
+  float: left;
+}
+
+.Section03 .slider_box .left {
+  width: 450px;
+}
+
+.Section03 .slider_box .left figure {
+  padding: 0 50px 0 0;
+}
+
+.Section03 .slider_box .right {
+  position: relative;
+  padding: 30px 0 0 0;
+  width: calc(100% - 450px);
+  height: 600px;
+  overflow: hidden;
+}
+
+.Section03 .slider_box .right h2 {
+  margin: 0 0 10px 0;
+  font-size: 35px;
+  font-weight: 700;
+  color: #f9f9f9;
+}
+
+.Section03 .slider_box .right p {
+  margin: 0 0 20px 0;
+  font-size: 17px;
+  font-weight: 300;
+  color: #f9f9f9;
+}
+
+.Section03 .slider_box .left img {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.Section03 .slider_box .right figure {
+  padding: 0 30px 0 0;
+}
+
+.Section03 .slider_box .right_slider {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: calc(100% + 100px);
+
+}
+
+.Section03 .slide_handler {
+  display: inline-block;
+  border: 1px solid #f9f9f9;
+  font-size: 0;
+}
+
+.Section03 .slide_handler i {
+  padding: 10px;
+  font-size: 20px;
+  color: #f9f9f9;
+}
+
+.Section03 .slide_handler i~i {
+  border-left: 1px solid #f9f9f9;
+}
+
+.Section03 strong {
+  line-height: 60px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.Section04 {
+  padding: 100px 0;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.Section04 h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+}
+
+.Section04>p {
+  font-size: 15px;
+  font-weight: 300;
+  margin: 0 0 40px 0;
+}
+
+.Section04 .inner {
+  position: relative;
+  width: 100%;
+}
+
+.Section04 .center_slide img {
+  margin: 0 auto;
+}
+
+.Section04 .center_slide figure {
+  filter: brightness(2) grayscale(1);
+}
+
+.Section04 .center_slide figure.on {
+  filter: brightness(1) grayscale(0);
+}
+
+.Section04 .content_box>div {
+  display: none;
+}
+
+.Section04 .content_box>div.on {
+  display: block;
+}
+
+.Section04 .case {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  margin: 0 0 0 -530px;
+  padding: 50px;
+  width: 300px;
+  background: #fff;
+  text-align: left;
+  box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.1);
+}
+
+.Section04 .inner a {
+  display: inline-block;
+  margin: 0 0 30px 0;
+  padding: 10px 25px;
+  border: 1px solid #008850;
+  color: #008850;
+  font-size: 13px;
+}
+
+.Section04 .content_box strong {
+  display: block;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 0 0 15px 0;
+}
+
+.Section04 .content_box p {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.45;
+  min-height: 150px;
+}
+
+.Section04 .num {
+  font-size: 30px;
+  color: #008850;
+}
+
+.Section04 .num span {
+  font-size: 16px;
+  color: #555;
+}
+
+.Section04 .slide_handler {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Section04 .slide_handler i {
+  padding: 15px 25px;
+  background: rgba(0, 0, 0, 0.25);
 }
