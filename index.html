@@ -14,6 +14,7 @@
   <script src="./js/jquery-1.12.4.min.js"></script>
   <script src="./js/slick.min.js"></script>
   <script src="./js/jquery.mb.YTPlayer.min.js"></script>
+  <script src="./js/jquery.cookie.js"></script>
   <script src="./js/main.js"></script>
 </head>
 
@@ -49,34 +50,83 @@
         </ul>
       </nav>
       <div class="top_service">
-        dddddd
+        <ul class="project">
+          <li><a href="#!">주요 프로젝트</a></li>
+          <li><a href="#!">IR</a></li>
+        </ul>
+        <div class="lang">
+          <strong> <i class="xi-globus"></i> KOR</strong>
+          <ul class="lang_box">
+            <li><a href="#!">KOR</a></li>
+            <li><a href="#!">ENG</a></li>
+            <li><a href="#!">CHA</a></li>
+          </ul>
+        </div>
+        <div class="top_search">
+          <strong>search</strong>
+          <div class="search_box">
+            <form action="#!">
+              <input type="text">
+              <button>검색</button>
+            </form>
+          </div>
+          <form action="#!" method="GET">
+            <input type="text">
+            <button>검색</button>
+          </form>
+        </div>
       </div>
     </header>
     <section class="Section01">
       <div class="main_slider">
         <figure class="itm01">
           <div class="inner">
-            <h2>dddd</h2>
-            <p>detail</p>
+            <h2>
+              현대엘리베이트 스마트 테크놀로지 체험 <span>Green Technology</span>
+            </h2>
+            <p>
+              현대엘리베이터가 만든 새로운 길을 따라 세상은 위로 넓어집니다.
+            </p>
             <a href="">바로가기</a>
           </div>
         </figure>
         <figure class="itm02">
           <div class="inner">
-            <h2>dddd</h2>
-            <p>detail</p>
+            <h2>
+              현대엘리베이트 스마트 테크놀로지 체험 <span>Green Technology</span>
+            </h2>
+            <p>
+              현대엘리베이터가 만든 새로운 길을 따라 세상은 위로 넓어집니다.
+            </p>
             <a href="">바로가기</a>
           </div>
         </figure>
         <figure class="itm03">
           <div class="inner">
-            <h2>dddd</h2>
-            <p>detail</p>
+            <h2>
+              현대엘리베이트 스마트 테크놀로지 체험 <span>Green Technology</span>
+            </h2>
+            <p>
+              현대엘리베이터가 만든 새로운 길을 따라 세상은 위로 넓어집니다.
+            </p>
             <a href="">바로가기</a>
           </div>
         </figure>
 
       </div>
+      <div class="num">
+        01 <span> / 03</span>
+      </div>
+      <div class="slide_handler">
+        <button>prev</button>
+        <button>next</button>
+      </div>
+      <ul class="slide_dots">
+        <li class="on"><span>slide01</span></li>
+        <li><span>slide02xxx</span></li>
+        <li><span>slide03</span></li>
+      </ul>
+
     </section>
     <section class="Section02">
       <h2>사람과 사람을 연결하는 종합 승강기 기업</h2>
@@ -184,8 +234,8 @@
           </div>
         </div>
         <div class="right">
-          <h2>건물의 가치를 높이는 현대엘리베이터</h2>
-          <p>특별한 기술을 실현할수록 여러분의 삶의 무대도 특별해 집니다.</p>
+          <h2>사람과 사람을 연결하는 종합 승강기 기업</h2>
+          <p>최고의 기술과 서비스로 편리하고 풍요로운 세상을 만들어갑니다.</p>
           <div class="slide_handler">
             <i class="xi-angle-left"></i>
             <i class="xi-angle-right"></i>
@@ -251,9 +301,9 @@
     </section>
     <section class="Section04">
       <h2>클린 무빙 솔루션</h2>
-      <p>접촉 없이 편하게 이동합니다</p>
+      <p>접촉 없이 편하게 이동합니다.</p>
       <div class="inner">
-        <div class="center_slide">
+        <div class="center_slider">
           <figure>
             <img src="./assets/main_s01.jpg" alt="">
           </figure>
@@ -285,83 +335,89 @@
         <div class="case">
           <div class="content_box">
             <div class="title on">
-              <strong>헤파필터 자동 냉온풍기</strong>
+              <strong>01 헤파필터 음이온 공기청정기</strong>
               <p>
-                온도 인식 센서를 통해, 스스로 알아서 제어하는 스마트 냉난방시스템으로 일년 내내 쾌적한 공기를 제공합니다.
+                헤파필터 적용 음이온 기능으로, 세균 및 미세먼지를 해결하고 항상 쾌적한 실내공간을 유지해 줍니다.
               </p>
               <a href="#!">자세히보기 <i class="xi-arrow-right"></i></a>
             </div>
             <div class="title">
-              <strong>헤파필터 자동 냉온풍기</strong>
+              <strong>02 헤파필터 음이온 공기청정기</strong>
               <p>
-                온도 인식 센서를 통해, 스스로 알아서 제어하는 스마트 냉난방시스템으로 일년 내내 쾌적한 공기를 제공합니다.
+                헤파필터 적용 음이온 기능으로, 세균 및 미세먼지를 해결하고 항상 쾌적한 실내공간을 유지해 줍니다.
               </p>
               <a href="#!">자세히보기 <i class="xi-arrow-right"></i></a>
             </div>
             <div class="title">
-              <strong>헤파필터 자동 냉온풍기</strong>
+              <strong>03 헤파필터 음이온 공기청정기</strong>
               <p>
-                온도 인식 센서를 통해, 스스로 알아서 제어하는 스마트 냉난방시스템으로 일년 내내 쾌적한 공기를 제공합니다.
+                항상 쾌적한 실내공간을 유지해 줍니다.
               </p>
               <a href="#!">자세히보기 <i class="xi-arrow-right"></i></a>
             </div>
             <div class="title">
-              <strong>헤파필터 자동 냉온풍기</strong>
+              <strong>04 헤파필터 음이온 공기청정기</strong>
               <p>
-                온도 인식 센서를 통해, 스스로 알아서 제어하는 스마트 냉난방시스템으로 일년 내내 쾌적한 공기를 제공합니다.
+                헤파필터 적용 음이온 기능으로, 세균 및 미세먼지를 해결하고 항상 쾌적한 실내공간을 유지해 줍니다.
               </p>
               <a href="#!">자세히보기 <i class="xi-arrow-right"></i></a>
             </div>
             <div class="title">
-              <strong>헤파필터 자동 냉온풍기</strong>
+              <strong>05 헤파필터 음이온 공기청정기</strong>
               <p>
-                온도 인식 센서를 통해, 스스로 알아서 제어하는 스마트 냉난방시스템으로 일년 내내 쾌적한 공기를 제공합니다.
+                헤파필터 적용 음이온 기능으로, 세균 및 미세먼지를 해결하고 항상 쾌적한 실내공간을 유지해 줍니다.
               </p>
               <a href="#!">자세히보기 <i class="xi-arrow-right"></i></a>
             </div>
             <div class="title">
-              <strong>헤파필터 자동 냉온풍기</strong>
+              <strong>06 헤파필터 음이온 공기청정기</strong>
               <p>
-                온도 인식 센서를 통해, 스스로 알아서 제어하는 스마트 냉난방시스템으로 일년 내내 쾌적한 공기를 제공합니다.
+                헤파필터 적용 음이온, 세균 및 미세먼지를 해결하고 항상 쾌적한 실내공간을 유지해 줍니다.
               </p>
               <a href="#!">자세히보기 <i class="xi-arrow-right"></i></a>
             </div>
             <div class="title">
-              <strong>헤파필터 자동 냉온풍기</strong>
+              <strong>07 헤파필터 음이온 공기청정기</strong>
               <p>
-                온도 인식 센서를 통해, 스스로 알아서 제어하는 스마트 냉난방시스템으로 일년 내내 쾌적한 공기를 제공합니다.
+                헤파필터 적용 음이온 기능으로, 세균 및 미세먼지를 해결하고 항상 쾌적한 실내공간을 유지해 줍니다.
               </p>
               <a href="#!">자세히보기 <i class="xi-arrow-right"></i></a>
             </div>
             <div class="title">
-              <strong>헤파필터 자동 냉온풍기</strong>
+              <strong>08 헤파필터 음이온 공기청정기</strong>
               <p>
-                온도 인식 센서를 통해, 스스로 알아서 제어하는 스마트 냉난방시스템으로 일년 내내 쾌적한 공기를 제공합니다.
+                헤파필터 적용 음이온 기능으로, 항상 쾌적한 실내공간을 유지해 줍니다.
               </p>
               <a href="#!">자세히보기 <i class="xi-arrow-right"></i></a>
             </div>
             <div class="title">
-              <strong>헤파필터 자동 냉온풍기</strong>
+              <strong>09 헤파필터 음이온 공기청정기</strong>
               <p>
-                온도 인식 센서를 통해, 스스로 알아서 제어하는 스마트 냉난방시스템으로 일년 내내 쾌적한 공기를 제공합니다.
+                헤파필터 적용 음이온 기능으로, 세균 및 미세먼지를 해결하고 항상 쾌적한 실내공간을 유지해 줍니다.
               </p>
               <a href="#!">자세히보기 <i class="xi-arrow-right"></i></a>
             </div>
-
           </div>
           <div class="num">
             00
           </div>
         </div>
         <div class="slide_handler">
-          <i class="xi-angle-left"></i>
-          <i class="xi-angle-right"></i>
+          <i class="xi-arrow-left"></i>
+          <i class="xi-arrow-right"></i>
         </div>
-
       </div>
     </section>
-
+    <div class="today_pop">
+      <span>my name is popuop</span>
+      <div class="buttom">
+        <input type="checkbox" name="" id="Today">
+        <span>오늘하루 열지 않기</span>
+        <button>CLOSE</button>
+      </div>
+    </div>
   </div>
+
 </body>
 
 </html>
